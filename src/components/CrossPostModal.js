@@ -79,7 +79,7 @@ function CrossPostModal(props) {
                 onChange={(e) => {
                   setLinkOne(e.target.value);
                 }}
-                className="form-control-solid"
+                className="form-control-solid rounded"
                 placeholder={props.firstPlaceholder}
                 aria-label={props.firstTooltip}
                 aria-describedby={props.firstTooltip}

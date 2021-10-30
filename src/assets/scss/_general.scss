@@ -1,0 +1,115 @@
+/* 
+// 1. General
+*/
+
+a {
+  text-decoration: none !important;
+  outline: none;
+}
+body {
+  font-family: $font-primary;
+  color: $dark;
+  background: $body-bg;
+  font-size: 15px;
+}
+p {
+  line-height: 1.8;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #1e1e2d;
+  background-clip: padding-box;
+  border: 1px solid #323248;
+  appearance: none;
+  border-radius: 0.475rem;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #fff;
+  background-color: #171723 !important;
+  border-color: #474761;
+  outline: 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
+    0 0 0 0.25rem rgba(54, 153, 255, 0.25);
+}
+
+.form-control.form-control-solid {
+  background-color: #1b1b29;
+  border-color: #1b1b29;
+  color: #92929f;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #1e1e2d;
+  background-clip: padding-box;
+  border: 0 solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.475rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  outline: 0;
+}
+
+.modal-body {
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.modal-header,
+.modal-footer {
+  border: 0px;
+}
+
+.input-group-text {
+  border: none;
+  padding-left: 1rem;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+}
+
+.input-group-check {
+  padding: 1rem;
+  background-color: #1b1b29;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.form-button {
+  font-size: 1.5rem !important;
+}

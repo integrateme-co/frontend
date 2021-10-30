@@ -1,0 +1,97 @@
+/* 
+// 04.Helper
+*/
+
+@each $color, $value in $theme-colors {
+    .text-#{$color} {
+        color: #{$value} !important;
+    }
+    .bg-#{$color} {
+        background-color: #{$value} !important;
+    }
+}
+.text-white-70 {
+    color: rgba($white, 0.70);
+}
+.text-lighten-warning {
+    color: rgba($warning, 0.50);
+}
+.bg-gradient-primary {
+    background: linear-gradient(-45deg, $primary 0%, $info 100%);
+}
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.bg-overlay {
+    background: $black;
+    position: absolute;
+display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    &.op-75 {
+        opacity: 0.75;
+    }
+}
+.font-weight-medium {
+    font-weight: 500;
+}
+
+.line-height-1_6 {
+    line-height: 1.6;
+}
+.line-height-1_4 {
+    line-height: 1.4;
+}
+
+.f-12 {
+    font-size: 12px;
+}
+
+.f-13 {
+    font-size: 13px;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.f-15 {
+    font-size: 15px;
+}
+
+.f-16 {
+    font-size: 16px;
+}
+
+.f-17 {
+    font-size: 17px;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.f-19 {
+    font-size: 19px;
+}
+
+.f-20 {
+    font-size: 20px;
+}
+.right-icon {
+    line-height: 0;
+    font-size: 22px;
+}
+
+
+.hero-bottom-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

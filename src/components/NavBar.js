@@ -9,7 +9,7 @@ import "./css/NavBar.css";
 function NavBar() {
   return (
     <>
-      <Navbar variant="dark" className="py-3">
+      <Navbar variant="dark" className="py-5">
         <Container className="mx-3">
           <Link to="/" style={{ textDecoration: "none" }}>
             <Navbar.Brand>

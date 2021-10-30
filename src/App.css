@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
   margin: 0;
   height: 100%;
 }
 
-.App {
+.Main {
   text-decoration: none !important;
-  background-color: #151521;
+  background-color: #090f19;
   height: 100vh;
 }

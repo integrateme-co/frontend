@@ -1,0 +1,41 @@
+/* 
+// 13. Footer
+*/
+
+.footer {
+    padding: 60px 0 24px;
+    position: relative;
+    .company-sub-menu {
+        li {
+            padding: 8px 0;
+            a {
+                transition: all 0.5s;
+                color: lighten($muted, 8%);
+                &:hover {
+                    color: $warning !important;
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+    .footer-social-list {
+        a {
+            border: 1px solid lighten($muted, 20%);
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 38px;
+            text-align: center;
+            color: lighten($muted, 10%);
+            font-size: 18px;
+            transition: all 0.3s;
+            &:hover {
+                background: $warning;
+                color: $white;
+                border-color: $warning;
+                box-shadow: 0 0 2px 7px rgba($warning, 0.15);
+            }
+        }
+    }
+}
