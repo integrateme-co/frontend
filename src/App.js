@@ -38,7 +38,7 @@ function App() {
               path="/login"
               component={() => {
                 window.location.href =
-                  "https://api.integrateme.co/accounts/login/";
+                  "https://api.integrateme.co/accounts/google/login/?process=login&next=%2Fsave%2Fkeys";
                 return null;
               }}
             />
