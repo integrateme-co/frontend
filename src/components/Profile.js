@@ -8,7 +8,7 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get("http://api.integrateme.co/save/keys")
+      .get("https://api.integrateme.co/save/keys")
       .then((res) => {
         console.log(res);
         setMediumToken(res.data.medium_api);
@@ -29,7 +29,7 @@ function Profile() {
       hashnode_api: { hashNodeToken },
     };
     axios
-      .post("http://api.integrateme.co/save/keys", body)
+      .post("https://api.integrateme.co/save/keys", body)
       .then((res) => {
         console.log(res);
         // setPosted(true);
