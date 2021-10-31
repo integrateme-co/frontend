@@ -16,9 +16,14 @@ function LoginButton(params) {
 
 function LogoutButton(params) {
   return (
-    <Link to="/logout" className="btn btn-warning">
-      Logout <span className="ml-2 right-icon">&#8594;</span>
-    </Link>
+    <>
+      <Link to="/logout" className="btn btn-warning">
+        Logout <span className="ml-2 right-icon">&#8594;</span>
+      </Link>
+      <Link to="/profile" className="btn btn-warning">
+        Profile <span className="ml-2 right-icon">&#8594;</span>
+      </Link>
+    </>
   );
 }
 

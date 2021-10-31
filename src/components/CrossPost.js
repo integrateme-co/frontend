@@ -19,7 +19,7 @@ function CrossPost() {
   return (
     <>
       <div className="mx-5 py-5 px-3">
-        <Link to="/home">
+        <Link to="/">
           <i class="fa-solid fa-arrow-left" style={{ fontSize: "3rem" }}></i>
         </Link>
       </div>

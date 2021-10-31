@@ -68,7 +68,7 @@ class Layout1 extends Component {
           {/* <Clients /> */}
 
           {/* Importing get in touch */}
-          <GetInTouch />
+          {/* <GetInTouch /> */}
 
           {/* Importing subscribe */}
           {/* <Subscribe /> */}

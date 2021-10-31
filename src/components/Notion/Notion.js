@@ -22,6 +22,11 @@ function Notion() {
 
   return (
     <div>
+      <div className="mx-5 py-5 px-3">
+        <Link to="/">
+          <i class="fa-solid fa-arrow-left" style={{ fontSize: "3rem" }}></i>
+        </Link>
+      </div>
       <div className="w-100">
         <div className="connect-notion">
           <img src={NotionLogo} width="25%" style={{ fill: "white" }} />

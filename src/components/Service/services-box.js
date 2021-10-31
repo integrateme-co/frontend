@@ -16,7 +16,7 @@ class ServiceBox extends Component {
                 {service.title}
               </h5>
               <p className="text-muted service-subtitle mb-4">{service.desc}</p>
-              <Link to="#" className="read-more-icon">
+              <Link to={"/" + service.link} className="read-more-icon">
                 <span className="right-icon">&#8594;</span>
               </Link>
             </div>
