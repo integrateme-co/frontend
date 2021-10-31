@@ -8,7 +8,7 @@ import FeatureBox from "./feature-box";
 //Import Images
 // import feature1 from "../../assets/images/features/img-1.png";
 import feature1 from "../images/notion_logo.svg";
-import feature2 from "../images/crosspost_logo.svg";
+import feature2 from "../images/crosspost_ill.svg";
 
 class Features extends Component {
   constructor(props) {

@@ -10,6 +10,8 @@ import hashNodeIcon from "./images/hashNode-icon.png";
 import mediumIcon from "./images/medium-icon.png";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Container } from "react-bootstrap";
+import Typewriter from "typewriter-effect";
+import "./css/typer.css";
 
 function CrossPost() {
   const [devShow, setDevShow] = React.useState(false);
@@ -22,6 +24,25 @@ function CrossPost() {
         <Link to="/">
           <i class="fa-solid fa-arrow-left" style={{ fontSize: "3rem" }}></i>
         </Link>
+      </div>
+      <div className="text-center text-primary" style={{ fontSize: "4rem" }}>
+        Crosspost from{" "}
+        <Typewriter
+          options={{
+            strings: ["DEV", "Medium", "HashNode"],
+            autoStart: true,
+            loop: true,
+            pauseFor: 10000,
+          }}
+        />{" "}
+        to{" "}
+        <Typewriter
+          options={{
+            strings: ["Medium", "HashNode", "DEV"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
       </div>
 
       <Container

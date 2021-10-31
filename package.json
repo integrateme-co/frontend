@@ -26,6 +26,7 @@
     "reactstrap": "^9.0.0",
     "slick-carousel": "^1.8.1",
     "tsparticles": "^1.37.1",
+    "typewriter-effect": "^2.18.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

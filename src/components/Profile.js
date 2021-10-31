@@ -8,7 +8,11 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get("https://api.integrateme.co/save/keys")
+      .get("https://api.integrateme.co/save/keys", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
       .then((res) => {
         console.log(res);
         setMediumToken(res.data.medium_api);
@@ -29,7 +33,12 @@ function Profile() {
       hashnode_api: { hashNodeToken },
     };
     axios
-      .post("https://api.integrateme.co/save/keys", body)
+      .post("https://api.integrateme.co/save/keys", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+        data: body,
+      })
       .then((res) => {
         console.log(res);
         // setPosted(true);

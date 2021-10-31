@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 //Import Images
 import hero1 from "../../assets/images/hero-1-img.png";
 import logo from "../../components/logo.png";
 
-function LoginButton(params) {
+function LoginButton() {
   return (
     <Link to="/login" className="btn btn-warning">
       GET STARTED <span className="ml-2 right-icon">&#8594;</span>
@@ -14,7 +15,7 @@ function LoginButton(params) {
   );
 }
 
-function LogoutButton(params) {
+function LogoutButton() {
   return (
     <>
       <Link to="/logout" className="btn btn-warning">
@@ -59,9 +60,11 @@ class Section extends Component {
                 height="60"
                 className="d-inline-block"
               />{" "}
-              <h1 className="hero-1-main text-primary text-center font-weight-normal px-4">
-                integrateme.co
-              </h1>
+              <Link to="/">
+                <h1 className="hero-1-main text-primary text-center font-weight-normal px-4">
+                  integrateme.co
+                </h1>
+              </Link>
             </div>
             <Row className="align-items-center">
               <Col lg={6}>
@@ -72,7 +75,13 @@ class Section extends Component {
                   <h1 className="hero-1-title mb-4 font-weight-normal line-height-1_4">
                     Automating your daily{" "}
                     <span className="text-primary font-weight-medium">
-                      DEV WORKFLOW
+                      <Typewriter
+                        options={{
+                          strings: ["DEV WORKFLOW"],
+                          autoStart: true,
+                          loop: true,
+                        }}
+                      />
                     </span>
                   </h1>
                   <p className="text-muted mb-4 pb-2">
