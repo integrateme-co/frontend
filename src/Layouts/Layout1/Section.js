@@ -6,8 +6,39 @@ import { Link } from "react-router-dom";
 import hero1 from "../../assets/images/hero-1-img.png";
 import logo from "../../components/logo.png";
 
+function LoginButton(params) {
+  return (
+    <Link to="/login" className="btn btn-warning">
+      GET STARTED <span className="ml-2 right-icon">&#8594;</span>
+    </Link>
+  );
+}
+
+function LogoutButton(params) {
+  return (
+    <Link to="/logout" className="btn btn-warning">
+      Logout <span className="ml-2 right-icon">&#8594;</span>
+    </Link>
+  );
+}
+
 class Section extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isLoggedin: false };
+    if (typeof sessionStorage.getItem("sessionid") !== "undefined") {
+      this.setState({ isLoggedin: true });
+    }
+  }
+
   render() {
+    let GetStarted;
+    const isLoggedin = this.state.isLoggedin;
+    if (isLoggedin) {
+      GetStarted = <LogoutButton />;
+    } else {
+      GetStarted = <LoginButton />;
+    }
     return (
       <React.Fragment>
         <section
@@ -44,9 +75,7 @@ class Section extends Component {
                     automating them through rigourously tested APIs, so you can
                     concentrate on what really matters.
                   </p>
-                  <Link to="/login" className="btn btn-warning">
-                    GET STARTED <span className="ml-2 right-icon">&#8594;</span>
-                  </Link>
+                  {GetStarted}
                 </div>
               </Col>
               <Col lg={6}>
