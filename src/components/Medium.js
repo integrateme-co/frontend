@@ -32,7 +32,7 @@ function Medium(props) {
     };
 
     axios
-      .post("https://integrate-app-xyz.herokuapp.com/api/v2/medium", body)
+      .post("https://cross-post.herokuapp.com/api/v2/medium", body)
       .then((res) => {
         console.log(res);
         setMediumUrl("");

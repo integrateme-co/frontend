@@ -11,7 +11,7 @@ export const postHandler = (mediumUserId) => {
   };
 
   axios
-    .post("https://integrate-app-xyz.herokuapp.com/api/v2/dev", body)
+    .post("https://cross-post.herokuapp.com/api/v2/dev", body)
     .then((res) => {
       console.log(res);
       setIsPosted(true);
