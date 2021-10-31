@@ -45,6 +45,14 @@ function App() {
               }}
             />
             <Route
+              path="/logout"
+              component={() => {
+                window.location.href =
+                  "https://api.integrateme.co/accounts/logout";
+                return null;
+              }}
+            />
+            <Route
               path="/notion-auth"
               component={() => {
                 window.location.href =
