@@ -12,3 +12,9 @@
   align-items: center;
   justify-content: space-around;
 }
+
+@media (max-width: 768px) {
+  .footer-text {
+    display: none;
+  }
+}

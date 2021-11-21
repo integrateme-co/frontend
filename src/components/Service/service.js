@@ -11,16 +11,22 @@ class Service extends Component {
     this.state = {
       services: [
         {
-          icon: "pe-7s-tools service-icon",
+          icon: "pe-7s-way service-icon",
           title: "CrossPost",
           desc: "Crosspost your blogs across DEV, Medium and Hashnode with the click of a button and seamelessly post you dev articles across different platforms.",
           link: "crosspost",
         },
         {
-          icon: "pe-7s-light service-icon",
+          icon: "pe-7s-loop service-icon",
           title: "Github Notion Sync",
           desc: "Sync your GitHub repository issues with Notion and keep track of your progress.",
           link: "notion",
+        },
+        {
+          icon: "pe-7s-light service-icon",
+          title: "Got an integration in mind?",
+          desc: "Create an issue in our GitHub Repo",
+          link: "github-issues",
         },
       ],
     };

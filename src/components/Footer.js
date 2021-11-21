@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import bcm from "../assets/images/bmc-button.png";
 import "./css/Footer.css";
 
 function Footer() {
@@ -18,6 +19,11 @@ function Footer() {
         <i class="fa-solid fa-envelope"></i>
         <span className="footer-text mx-3">hey@integrateme.co</span>
       </a>
+      <div className="footer-item">
+        <Link to="/github" style={{ textDecoration: "none", color: "#FFA800" }}>
+          <img src={bcm} alt="BMC" width="150px" />
+        </Link>
+      </div>
     </footer>
   );
 }

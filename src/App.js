@@ -34,6 +34,14 @@ function App() {
               }}
             />
             <Route
+              path="/github-issues"
+              component={() => {
+                window.location.href =
+                  "https://github.com/integrateme-co/integrate-io/issues";
+                return null;
+              }}
+            />
+            <Route
               path="/login"
               component={() => {
                 window.location.href =
