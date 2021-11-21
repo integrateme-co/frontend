@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
+import Lottie from "react-lottie";
 
-//Import Images
-import hero1 from "../../assets/images/hero-1-img.png";
-import logo from "../../components/logo.png";
+//Import LottieFiles
+import main from "../assets/lottiefiles/main.json";
+
+//Import images
+import logo from "../components/logo.png";
 
 function LoginButton() {
   return (
@@ -38,6 +41,14 @@ class Section extends Component {
   }
 
   render() {
+    const options = {
+      loop: true,
+      autoplay: true,
+      animationData: main,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
     let GetStarted;
     const isLoggedin = this.state.isLoggedin;
     if (isLoggedin) {
@@ -94,11 +105,12 @@ class Section extends Component {
               </Col>
               <Col lg={6}>
                 <div className="mt-5 mt-lg-0">
-                  <img
+                  {/* <img
                     src={hero1}
                     alt=""
                     className="img-fluid mx-auto d-block"
-                  />
+                  /> */}
+                  <Lottie options={options} />
                 </div>
               </Col>
             </Row>

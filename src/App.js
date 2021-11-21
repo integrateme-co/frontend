@@ -2,11 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import LandingPage from "./components/LandingPage";
-import Home from "./components/Home";
 import CrossPost from "./components/CrossPost";
 import Footer from "./components/Footer";
-import LP1 from "./Layouts/Layout1/Layout1";
+import LandingPage from "./Layouts/Layout";
 import Profile from "./components/Profile";
 
 // Import Scss
@@ -21,11 +19,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={LP1} />
+        <Route path="/" exact component={LandingPage} />
         <>
           <NavBar />
           <div className="Main">
-            <Route path="/home" component={Home} />
             <Route path="/crosspost" component={CrossPost} />
             <Route path="/notion" component={Notion} />
             <Route

@@ -5,19 +5,35 @@ import { Container } from "reactstrap";
 import SectionTitle from "../common/section-title";
 import FeatureBox from "./feature-box";
 
-//Import Images
-// import feature1 from "../../assets/images/features/img-1.png";
-import feature1 from "../images/notion_logo.svg";
-import feature2 from "../images/crosspost_ill.svg";
+//Import Animations
+import AnimCrosspost from "../../assets/lottiefiles/crosspost.json";
+import AnimGithubNotion from "../../assets/lottiefiles/githubnotion.json";
 
 class Features extends Component {
   constructor(props) {
     super(props);
+    const crosspostOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: AnimCrosspost,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
+    const githubNotionOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: AnimGithubNotion,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
+
     this.state = {
       features: [
         {
           id: 1,
-          img: feature1,
+          options: crosspostOptions,
           icon: "mdi  mdi-laptop-mac",
           title: "Crosspost your blogs",
           desc: "Crosspost your blogs across DEV, Medium and Hashnode with the click of a button and seamelessly post you dev articles across different platforms",
@@ -25,7 +41,7 @@ class Features extends Component {
         },
         {
           id: 2,
-          img: feature2,
+          options: githubNotionOptions,
           icon: "mdi  mdi-account-group",
           title: "Github Notion Sync",
           desc: "Sync your GitHub repository issues with Notion and keep track of your progress.",

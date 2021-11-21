@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Alert from "react-bootstrap/Alert";
+import Spinner from "react-bootstrap/Spinner";
 import { InputGroup, FormControl, Row } from "react-bootstrap";
 import "./css/CrossPostModal.css";
 
@@ -16,6 +17,8 @@ function Dev(props) {
   const [mediumToken, setMediumToken] = useState("");
   const [hashNodeToken, setHashNodeToken] = useState("");
   const [isPosted, setPosted] = useState(false);
+  const [isError, setError] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const postHandler = (mediumUserId) => {
     const body = {
@@ -38,7 +41,7 @@ function Dev(props) {
       })
       .catch((err) => {
         console.log(err);
-        alert("Please Enter Valid Details");
+        setError(true);
       });
   };
 
@@ -48,6 +51,7 @@ function Dev(props) {
       alert("Please select atleast one of the options.");
       return;
     }
+    setLoading(true);
     if (isMedium) {
       let mediumUserId;
       axios
@@ -64,6 +68,7 @@ function Dev(props) {
     } else {
       postHandler(null);
     }
+    setLoading(false);
   };
 
   const resetHandler = (e) => {
@@ -236,7 +241,17 @@ function Dev(props) {
           <Row className="mb-5 mt-3 g-3">
             <div className="col w-75">
               <Button className="form-button w-100" type="submit">
-                Submit
+                Submit{" "}
+                {isLoading ? (
+                  <Spinner
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                    className="ml-2"
+                  />
+                ) : null}
               </Button>
             </div>
             <div className="col w-75">
@@ -254,6 +269,16 @@ function Dev(props) {
                 <Alert className="text-center" key="success" variant="success">
                   {" "}
                   Successful!{" "}
+                </Alert>
+              </div>
+            </Row>
+          )}
+          {isError && (
+            <Row className="mb-5 mt-3 g-3">
+              <div className="col w-75">
+                <Alert className="text-center" key="error" variant="danger">
+                  {" "}
+                  Error!{" "}
                 </Alert>
               </div>
             </Row>

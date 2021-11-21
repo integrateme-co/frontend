@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col } from "reactstrap";
 import featurebg from "../../assets/images/features/features-bg.png";
+import Lottie from "react-lottie";
 
 class FeatureBox extends Component {
   render() {
@@ -22,11 +23,7 @@ class FeatureBox extends Component {
                 style={{ background: `url(${featurebg}) center center` }}
               >
                 <div className="features-img">
-                  <img
-                    src={feature.img}
-                    alt=""
-                    className="img-fluid d-block mx-auto"
-                  />
+                  <Lottie options={feature.options} />
                 </div>
               </Col>
               <Col md={{ size: 6, offset: 1 }}>
@@ -66,11 +63,7 @@ class FeatureBox extends Component {
                 style={{ background: `url(${featurebg}) center center` }}
               >
                 <div className="features-img">
-                  <img
-                    src={feature.img}
-                    alt=""
-                    className="img-fluid d-block mx-auto"
-                  />
+                  <Lottie options={feature.options} />
                 </div>
               </Col>
             </Row>

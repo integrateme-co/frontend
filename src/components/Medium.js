@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Alert from "react-bootstrap/Alert";
+import Spinner from "react-bootstrap/Spinner";
 import { InputGroup, FormControl, Row } from "react-bootstrap";
 import "./css/CrossPostModal.css";
 
@@ -16,6 +17,8 @@ function Medium(props) {
   const [devToken, setDevToken] = useState("");
   const [hashNodeToken, setHashNodeToken] = useState("");
   const [isPosted, setPosted] = useState(false);
+  const [isError, setError] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +26,7 @@ function Medium(props) {
       alert("Please select atleast one of the options.");
       return;
     }
+    setLoading(true);
     const body = {
       url: mediumUrl,
       dev_api: devToken,
@@ -43,8 +47,9 @@ function Medium(props) {
       })
       .catch((err) => {
         console.log(err);
-        alert("Please Enter Valid Details");
+        setError(true);
       });
+    setLoading(false);
   };
 
   const resetHandler = (e) => {
@@ -217,7 +222,17 @@ function Medium(props) {
           <Row className="mb-5 mt-3 g-3">
             <div className="col w-75">
               <Button className="form-button w-100" type="submit">
-                Submit
+                Submit{" "}
+                {isLoading ? (
+                  <Spinner
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                    className="ml-2"
+                  />
+                ) : null}
               </Button>
             </div>
             <div className="col w-75">
@@ -239,11 +254,18 @@ function Medium(props) {
               </div>
             </Row>
           )}
+          {isError && (
+            <Row className="mb-5 mt-3 g-3">
+              <div className="col w-75">
+                <Alert className="text-center" key="error" variant="danger">
+                  {" "}
+                  Error!{" "}
+                </Alert>
+              </div>
+            </Row>
+          )}
         </Form>
       </Modal.Body>
-      {/* <Modal.Footer className="mb-3">
-
-      </Modal.Footer> */}
     </Modal>
   );
 }

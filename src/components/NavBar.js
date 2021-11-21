@@ -1,7 +1,6 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import logo from "./logo.png";
-import brandName from "./images/brandName.jpg";
 import { Link } from "react-router-dom";
 
 import "./css/NavBar.css";
