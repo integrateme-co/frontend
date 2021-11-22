@@ -20,9 +20,9 @@ function Footer() {
         <span className="footer-text mx-3">hey@integrateme.co</span>
       </a>
       <div className="footer-item">
-        <Link to="/github" style={{ textDecoration: "none", color: "#FFA800" }}>
+        <a href="https://www.buymeacoffee.com/integrateme">
           <img src={bcm} alt="BMC" width="150px" />
-        </Link>
+        </a>
       </div>
     </footer>
   );

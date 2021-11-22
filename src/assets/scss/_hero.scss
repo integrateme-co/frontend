@@ -27,106 +27,10 @@
   padding: 90px 0 100px;
 }
 
-// ***** Hero 2 ***** //
-.hero-2-bg {
-  padding: 170px 0 180px;
-  .hero-2-content {
-    position: relative;
-    z-index: 1;
-  }
-  .hero-2-bg-overlay {
-    background-image: url("../images/hero-2-bg.png");
-    background-position: center center;
-    @include hero-bg-overlay;
-  }
-}
-
-// ***** Hero 3 ***** //
-.hero-3-bg {
-  padding: 170px 0 0;
-  .hero-3-img {
-    margin-top: 90px;
-  }
-  .hero-3-bg-overlay {
-    background-image: url("../images/hero-3-bg.png");
-    @include hero-bg-overlay;
-  }
-}
-
-// ***** Hero 4 ***** //
-.hero-4-bg {
-  padding: 210px 0 190px;
-  .hero-4-bg-overlay {
-    background-image: url("../images/hero-4-bg.png");
-    background-position: center center;
-    @include hero-bg-overlay;
-  }
-  .hero-login-form {
-    box-shadow: 0 4px 14px 0px rgba($black, 0.1);
-    .registration-form {
-      label {
-        color: lighten($muted, 5%);
-      }
-    }
-  }
-}
-
-// ***** Hero 5 ***** //
-.hero-5-bg {
-  .bd-example {
-    z-index: 1;
-    .carousel-item {
-      padding: 280px 0 260px;
-    }
-    .carousel-indicators {
-      bottom: 50px;
-      li {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        margin-right: 8px;
-        margin-left: 8px;
-      }
-      .active {
-        border: 4px solid transparent;
-        box-shadow: 0 0 1px $white;
-      }
-    }
-    .carousel-caption {
-      position: relative;
-      left: 0;
-      right: 0;
-    }
-  }
-}
-
-// ***** Hero 6 ***** //
-.hero-6-bg {
-  background-size: cover !important;
-  .hero-6-title-content {
-    position: relative;
-    z-index: 1;
-  }
-}
-
 // ***** Responsive ***** //
 @media (max-width: 576px) {
   .hero-main {
     padding: 0px 0 30px;
-  }
-
-  .hero-1-bg {
-    padding: 30px 0 70px;
-    .hero-1-title {
-      font-size: 38px !important;
-    }
-  }
-  .hero-2-title {
-    font-size: 34px;
-  }
-  .hero-3-title,
-  .hero-4-title {
-    font-size: 28px;
   }
 }
 
@@ -134,21 +38,5 @@
   .hero-main {
     justify-content: center;
     padding: 0px 0 30px;
-  }
-
-  .hero-2-bg {
-    padding: 130px 0;
-  }
-  .hero-4-bg {
-    padding: 130px 0 90px;
-  }
-  .hero-5-bg {
-    .carousel-item {
-      padding: 140px 0 !important;
-    }
-  }
-  .hero-6-bg {
-    height: auto !important;
-    padding: 130px 0 90px !important;
   }
 }

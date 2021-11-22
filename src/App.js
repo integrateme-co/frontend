@@ -26,6 +26,14 @@ function App() {
             <Route path="/crosspost" component={CrossPost} />
             <Route path="/notion" component={Notion} />
             <Route
+              path="/buy-me-a-coffee"
+              component={() => {
+                window.location.href =
+                  "https://www.buymeacoffee.com/integrateme";
+                return null;
+              }}
+            />
+            <Route
               path="/github"
               component={() => {
                 window.location.href =

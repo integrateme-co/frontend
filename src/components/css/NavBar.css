@@ -1,3 +1,9 @@
 .navbar {
   background-color: #090f19 !important;
 }
+
+@media (max-width: 768px) {
+  .hero-1-main {
+    font-size: 2rem !important;
+  }
+}

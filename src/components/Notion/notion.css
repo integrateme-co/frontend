@@ -6,3 +6,53 @@
   align-content: center;
   align-items: center;
 }
+
+.vl {
+  border-left: 1px solid white;
+  height: 400px;
+}
+
+@media (max-width: 1200px) {
+  .vl {
+    display: none;
+  }
+
+  .animation-container {
+    display: none;
+  }
+}
+
+svg {
+  border-radius: 30px !important;
+}
+
+.btn-hook {
+  color: #c9d1d9;
+  background-color: #21262d;
+  border-color: #f0f6fc1a;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 7px;
+}
+
+.btn-hook:hover {
+  color: #fff;
+  background-color: #2d3c4c;
+  border-color: #f0f6fc;
+  text-decoration: none;
+}
+
+li {
+  margin: 40px 0;
+  font-size: 1.1rem;
+}
+
+.btn-success.mod {
+  border-radius: 7px;
+  background-color: #009330 !important;
+  padding: 5px 14px;
+  border-color: #009330 !important;
+}
