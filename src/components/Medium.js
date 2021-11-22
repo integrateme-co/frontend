@@ -265,6 +265,27 @@ function Medium(props) {
             </Row>
           )}
         </Form>
+        <div>
+          <h3 className="text-center">Limitation of Medium</h3>
+          <p className="text-justify">
+            Unfortunately, Medium does not have an API to fetch the content of a
+            post. To bypass this we fetch the RSS feed of that post instead.
+            <br />
+            Thus cross-posting from medium to dev.to or hashnode does not work
+            on custom domain or a post published under a publication. <br />
+            Thus, in order for posting from medium to dev.to or hashnode to be
+            possible the post URL should be of the given format : <br />
+            <a href="javascript:void(0)">
+              https://medium.com/@YOUR_USER_NAME/POST_TITLE-....
+            </a>
+            <br />
+            Example:
+            <br />
+            <a href="https://medium.com/@hemantpandey17/my-interview-preparation-journey-c98e6efc9f0c">
+              https://medium.com/@hemantpandey17/my-interview-preparation-journey-c98e6efc9f0c
+            </a>
+          </p>
+        </div>
       </Modal.Body>
     </Modal>
   );

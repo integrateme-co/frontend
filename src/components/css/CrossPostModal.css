@@ -95,3 +95,7 @@
 .form-button {
   font-size: 1.5rem !important;
 }
+
+.text-justify {
+  text-align: justify;
+}
