@@ -20,12 +20,10 @@ function CrossPost() {
 
   return (
     <>
-      <div className="mx-5 py-5 px-3">
-        <Link to="/">
-          <i class="fa-solid fa-arrow-left" style={{ fontSize: "3rem" }}></i>
-        </Link>
-      </div>
-      <div className="text-center text-primary" style={{ fontSize: "4rem" }}>
+      <div
+        className="text-center text-primary mb-5"
+        style={{ fontSize: "2rem" }}
+      >
         Crosspost from{" "}
         <Typewriter
           options={{
@@ -34,7 +32,7 @@ function CrossPost() {
             loop: true,
             pauseFor: 10000,
           }}
-        />{" "}
+        />
         to{" "}
         <Typewriter
           options={{
@@ -53,6 +51,7 @@ function CrossPost() {
           alignItems: "center",
           height: "80%",
         }}
+        className="mb-5"
       >
         <CardGroup>
           {/* DEV */}
