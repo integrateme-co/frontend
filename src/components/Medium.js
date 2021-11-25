@@ -36,7 +36,10 @@ function Medium(props) {
     };
 
     axios
-      .post("https://cross-post.herokuapp.com/api/v2/medium", body)
+      .post(
+        "https://integrate-io-production.up.railway.app/api/v2/medium",
+        body
+      )
       .then((res) => {
         console.log(res);
         setMediumUrl("");
@@ -49,7 +52,9 @@ function Medium(props) {
         console.log(err);
         setError(true);
       });
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
   };
 
   const resetHandler = (e) => {
@@ -249,7 +254,7 @@ function Medium(props) {
               <div className="col w-75">
                 <Alert className="text-center" key="success" variant="success">
                   {" "}
-                  Successful!{" "}
+                  Successful, check your draft!{" "}
                 </Alert>
               </div>
             </Row>
@@ -275,13 +280,17 @@ function Medium(props) {
             on custom domain or a post published under a publication. <br />
             Thus, in order for posting from medium to dev.to or hashnode to be
             possible the post URL should be of the given format : <br />
-            <a href="javascript:void(0)">
+            <a href="https://medium.com/" target="_blank" rel="noreferrer">
               https://medium.com/@YOUR_USER_NAME/POST_TITLE-....
             </a>
             <br />
             Example:
             <br />
-            <a href="https://medium.com/@hemantpandey17/my-interview-preparation-journey-c98e6efc9f0c">
+            <a
+              href="https://medium.com/@hemantpandey17/my-interview-preparation-journey-c98e6efc9f0c"
+              target="_blank"
+              rel="noreferrer"
+            >
               https://medium.com/@hemantpandey17/my-interview-preparation-journey-c98e6efc9f0c
             </a>
           </p>

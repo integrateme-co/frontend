@@ -31,7 +31,7 @@ function Dev(props) {
     };
 
     axios
-      .post("https://cross-post.herokuapp.com/api/v2/dev", body)
+      .post("https://integrate-io-production.up.railway.app/api/v2/dev", body)
       .then((res) => {
         console.log(res);
         setPosted(true);
@@ -46,12 +46,13 @@ function Dev(props) {
   };
 
   const handleSubmit = (e) => {
+    setLoading(true);
     e.preventDefault();
     if (!isMedium && !isHashNode) {
       alert("Please select atleast one of the options.");
+      setLoading(false);
       return;
     }
-    setLoading(true);
     if (isMedium) {
       let mediumUserId;
       axios
@@ -68,7 +69,9 @@ function Dev(props) {
     } else {
       postHandler(null);
     }
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
   };
 
   const resetHandler = (e) => {
@@ -268,7 +271,7 @@ function Dev(props) {
               <div className="col w-75">
                 <Alert className="text-center" key="success" variant="success">
                   {" "}
-                  Successful!{" "}
+                  Successful, check your draft!{" "}
                 </Alert>
               </div>
             </Row>

@@ -29,7 +29,7 @@ function Login(props) {
     };
 
     axios
-      .post("https://cross-post.herokuapp.com/api/v2/dev", body)
+      .post("https://integrate-io-production.up.railway.app/api/v2/dev", body)
       .then((res) => {
         console.log(res);
         setPosted(true);

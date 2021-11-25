@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-// import CrossPostModal from "./CrossPostModal";
 import Dev from "./Dev";
 import HashNode from "./HashNode";
 import Medium from "./Medium";

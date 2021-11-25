@@ -31,7 +31,7 @@ function HashNode(props) {
     };
 
     axios
-      .post("https://cross-post.herokuapp.com/api/v2/hash", body)
+      .post("https://integrate-io-production.up.railway.app/api/v2/hash", body)
       .then((res) => {
         console.log(res);
         setDevUrl("");
@@ -69,7 +69,9 @@ function HashNode(props) {
     } else {
       postHandler(null);
     }
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
   };
 
   const resetHandler = (e) => {
@@ -269,7 +271,7 @@ function HashNode(props) {
               <div className="col w-75">
                 <Alert className="text-center" key="success" variant="success">
                   {" "}
-                  Successful!{" "}
+                  Successful, check your draft!{" "}
                 </Alert>
               </div>
             </Row>

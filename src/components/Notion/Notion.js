@@ -19,7 +19,7 @@ function Notion() {
     },
   };
   return (
-    <>
+    <div className="mb-5 pb-5">
       <div className="container d-flex justify-content-center">
         <div className="notion-container mx-5 p-5">
           <div className="notion-logo">
@@ -40,13 +40,17 @@ function Notion() {
       </div>
       {/* Instructions */}
       <div className="container d-flex justify-content-center w-100">
-        <div className="notion-container mx-5 py-5">
-          <div className="notion-text pb-5">
+        <div className="notion-container mx-5 my-5">
+          <div className="notion-text">
             <h1 className="text-center mb-5">Instructions</h1>
             <ol>
               <li>
                 Duplicate{" "}
-                <a href="https://uzairali.notion.site/f22775996b054d97ad5eaf15b1e15a30?v=147babefdef04a63b8b6065ce409090e">
+                <a
+                  href="https://uzairali.notion.site/f22775996b054d97ad5eaf15b1e15a30?v=147babefdef04a63b8b6065ce409090e"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   this template
                 </a>{" "}
                 into your notion workspace.
@@ -114,7 +118,7 @@ function Notion() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
