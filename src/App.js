@@ -8,7 +8,7 @@ import LandingPage from "./Layouts/Layout";
 import Profile from "./components/Profile";
 
 // Import Scss
-import "./theme.scss";
+// import "./theme.scss";
 
 //Import Icon Css
 import "./assets/css/materialdesignicons.min.css";
@@ -53,7 +53,7 @@ function App() {
               path="/login"
               component={() => {
                 window.location.href =
-                  "https://api.integrateme.co/accounts/google/login/?process=login&next=%2Fsave%2Fkeys";
+                  "https://api.integrateme.co/accounts/google/login/?process=login";
                 return null;
               }}
             />
