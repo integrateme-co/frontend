@@ -13,7 +13,6 @@
     "availity-reactstrap-validation": "^2.7.1",
     "axios": "^0.23.0",
     "bootstrap": "^5.1.3",
-    "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
     "react-countup": "^6.0.0",
@@ -34,8 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
