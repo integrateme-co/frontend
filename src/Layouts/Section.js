@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
@@ -11,9 +11,30 @@ import main from "../assets/lottiefiles/main.json";
 import logo from "../components/logo.png";
 
 function LoginButton() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const scroll = urlParams.get("scroll");
+    if (scroll) {
+      setLoggedIn(true);
+    }
+  }, []);
+
+  if (loggedIn) {
+    return (
+      <div>
+        <Link to="/login" className="btn btn-warning">
+          Login with Google <span className="ml-2 right-icon">&#8594;</span>
+        </Link>
+        <button className="btn btn-warning d-inline-block rounded-circle ms-3">
+          <i class="fa-solid fa-check" style={{ fontSize: "1.5" }}></i>
+        </button>
+      </div>
+    );
+  }
   return (
     <Link to="/login" className="btn btn-warning">
-      GET STARTED <span className="ml-2 right-icon">&#8594;</span>
+      Login with Google <span className="ml-2 right-icon">&#8594;</span>
     </Link>
   );
 }

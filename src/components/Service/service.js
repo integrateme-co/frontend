@@ -30,12 +30,21 @@ class Service extends Component {
         },
       ],
     };
+    this.myRef = React.createRef();
+  }
+
+  componentDidMount() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const scroll = urlParams.get("scroll");
+    if (scroll) {
+      this.myRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   render() {
     return (
       <React.Fragment>
-        <section className="section" id="services">
+        <section className="section" id="services" ref={this.myRef}>
           <Container>
             <SectionTitle
               title1="Explore "

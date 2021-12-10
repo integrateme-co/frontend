@@ -12,19 +12,10 @@ function NavBar() {
         <Container className="mx-3">
           <Link to="/" style={{ textDecoration: "none" }}>
             <Navbar.Brand>
-              <img
-                alt=""
-                src={logo}
-                width="30"
-                height="30"
-                className="d-inline-block"
-              />{" "}
-              <span
-                className="align-middle mx-3 h1"
-                style={{ color: "#732893" }}
-              >
+              <img alt="" src={logo} width="52" height="52" />{" "}
+              <span className="align-middle mx-3 h1 text-primary">
                 {" "}
-                Integrateme.co{" "}
+                integrateme.co{" "}
               </span>
             </Navbar.Brand>
           </Link>
