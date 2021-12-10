@@ -35,7 +35,7 @@
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: 090F19;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -8356,7 +8356,7 @@ p {
   color: #090f19 !important; }
 
 .bg-dark {
-  background-color: #090f19 !important; }
+  background-color: #090F19 !important; }
 
 .text-muted {
   color: #9da9bb !important; }

@@ -59,7 +59,7 @@ class Section extends Component {
     return (
       <React.Fragment>
         <section
-          className="hero-1-bg position-relative bg-dark d-flex align-items-center"
+          className="hero-1-bg position-relative d-flex align-items-center"
           id="home"
         >
           <Container>

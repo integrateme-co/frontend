@@ -54,7 +54,7 @@ class Features extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section bg-dark" id="features">
+        <section className="section" id="features">
           <Container>
             <SectionTitle
               title1="Know about our "
