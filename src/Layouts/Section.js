@@ -26,7 +26,7 @@ function LoginButton() {
         <Link to="/login" className="btn btn-warning">
           Login with Google <span className="ml-2 right-icon">&#8594;</span>
         </Link>
-        <button className="btn btn-warning d-inline-block rounded-circle ms-3">
+        <button className="btn btn-warning d-inline-block  ms-3">
           <i class="fa-solid fa-check" style={{ fontSize: "1.5" }}></i>
         </button>
       </div>
